@@ -39,9 +39,9 @@ const CreateEventPage = () => {
     const fetchData = async () => {
       try {
         const [catRes, cityRes, areaRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/public/sport-categories'),
-          axios.get('http://localhost:5000/api/public/cities'),
-          axios.get('http://localhost:5000/api/public/areas'),
+          axios.get('https://sportsync-backend-ap3i.onrender.com/api/public/sport-categories'),
+          axios.get('https://sportsync-backend-ap3i.onrender.com/api/public/cities'),
+          axios.get('https://sportsync-backend-ap3i.onrender.com/api/public/areas'),
         ]);
         setCategories(catRes.data);
         setCities(cityRes.data);
@@ -77,7 +77,7 @@ const CreateEventPage = () => {
 
     try {
       await axios.post(
-        'http://localhost:5000/api/events',
+        'https://sportsync-backend-ap3i.onrender.com/api/events',
         form,
         {
           headers: {

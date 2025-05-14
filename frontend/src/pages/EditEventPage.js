@@ -41,16 +41,16 @@ const EditEventPage = () => {
     const fetchEventAndLists = async () => {
       try {
         const [eventRes, catRes, cityRes, areaRes] = await Promise.all([
-          axios.get(`http://localhost:5000/api/events/${id}`, {
+          axios.get(`https://sportsync-backend-ap3i.onrender.com/api/events/${id}`, {
             headers: { Authorization: `Bearer ${token} `},
           }),
-          axios.get('http://localhost:5000/api/public/sport-categories', {
+          axios.get('https://sportsync-backend-ap3i.onrender.com/api/public/sport-categories', {
             headers: { Authorization: `Bearer ${token}` },
           }),
-          axios.get('http://localhost:5000/api/public/cities', {
+          axios.get('https://sportsync-backend-ap3i.onrender.com/api/public/cities', {
             headers: { Authorization: `Bearer ${token} `},
           }),
-          axios.get('http://localhost:5000/api/public/areas', {
+          axios.get('https://sportsync-backend-ap3i.onrender.com/api/public/areas', {
             headers: { Authorization: `Bearer ${token} `},
           }),
         ]);
@@ -92,7 +92,7 @@ const EditEventPage = () => {
   const handleSubmit = async () => {
     try {
       await axios.put(
-        `http://localhost:5000/api/events/${id}`,
+        `https://sportsync-backend-ap3i.onrender.com/api/events/${id}`,
         form,
         {
           headers: {

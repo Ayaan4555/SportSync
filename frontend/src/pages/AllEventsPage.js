@@ -20,7 +20,7 @@ const AllEventsPage = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/events');
+        const res = await axios.get('https://sportsync-backend-ap3i.onrender.com/api/events');
         setEvents(res.data);
       } catch (err) {
         toast({

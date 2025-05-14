@@ -29,7 +29,7 @@ const AdminCities = () => {
 
   const fetchCities = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/admin/cities', {
+      const res = await axios.get('https://sportsync-backend-ap3i.onrender.com/api/admin/cities', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCities(res.data);
@@ -49,14 +49,14 @@ const AdminCities = () => {
     try {
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/api/admin/cities/${editingId}`,
+          `https://sportsync-backend-ap3i.onrender.com/api/admin/cities/${editingId}`,
           { name: cityName },
           { headers: { Authorization: `Bearer ${token}` } }
         );
         toast({ title: 'City updated', status: 'success', duration: 3000, isClosable: true });
       } else {
         await axios.post(
-          'http://localhost:5000/api/admin/cities',
+          'https://sportsync-backend-ap3i.onrender.com/api/admin/cities',
           { name: cityName },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -79,7 +79,7 @@ const AdminCities = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/cities/${id}`, {
+      await axios.delete(`https://sportsync-backend-ap3i.onrender.com/api/admin/cities/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast({ title: 'City deleted', status: 'success', duration: 3000, isClosable: true });

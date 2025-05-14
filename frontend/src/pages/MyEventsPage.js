@@ -24,7 +24,7 @@ const MyEventsPage = () => {
     const fetchMyEvents = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:5000/api/events/my-events",
+          "https://sportsync-backend-ap3i.onrender.com/api/events/my-events",
           {
             headers: { Authorization: `Bearer ${token} ` },
           }
@@ -49,7 +49,7 @@ const MyEventsPage = () => {
     if (!window.confirm("Are you sure you want to delete this event?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/events/${id}`, {
+      await axios.delete(`https://sportsync-backend-ap3i.onrender.com/api/events/${id}`, {
         headers: { Authorization: `Bearer ${token} ` },
       });
 

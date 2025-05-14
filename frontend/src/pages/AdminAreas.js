@@ -31,7 +31,7 @@ const AdminAreas = () => {
 
   const fetchCities = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/admin/cities', {
+      const res = await axios.get('https://sportsync-backend-ap3i.onrender.com/api/admin/cities', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setCities(res.data);
@@ -47,7 +47,7 @@ const AdminAreas = () => {
 
   const fetchAreas = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/admin/areas', {
+      const res = await axios.get('https://sportsync-backend-ap3i.onrender.com/api/admin/areas', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAreas(res.data);
@@ -75,14 +75,14 @@ const AdminAreas = () => {
     try {
       if (editingId) {
         await axios.put(
-          `http://localhost:5000/api/admin/areas/${editingId}`,
+          `https://sportsync-backend-ap3i.onrender.com/api/admin/areas/${editingId}`,
           { name: areaName, city: selectedCity },
           { headers: { Authorization: `Bearer ${token} `} }
         );
         toast({ title: 'Area updated', status: 'success', duration: 3000, isClosable: true });
       } else {
         await axios.post(
-          'http://localhost:5000/api/admin/areas',
+          'https://sportsync-backend-ap3i.onrender.com/api/admin/areas',
           { name: areaName, city: selectedCity },
           { headers: { Authorization: `Bearer ${token} `} }
         );
@@ -112,7 +112,7 @@ const AdminAreas = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/admin/areas/${id}`, {
+      await axios.delete(`https://sportsync-backend-ap3i.onrender.com/api/admin/areas/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       toast({ title: 'Area deleted', status: 'success', duration: 3000, isClosable: true });
