@@ -77,7 +77,7 @@ const HomePage = () => {
 
       {/* Footer */}
       <Box textAlign="center" py={6} color="gray.600" fontSize="sm">
-        &copy; {new Date().getFullYear()} SportsBuddy. All rights reserved.
+        &copy; {new Date().getFullYear()} SportSync. All rights reserved.
       </Box>
     </Box>
   );
