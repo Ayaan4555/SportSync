@@ -43,7 +43,7 @@ const Navbar = () => {
   );
 
   return (
-    <Box bg="#1A1A1A" px={6} color="white">
+    <Box bg="#004d4d" px={6} color="white">
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
         <IconButton
           size={'md'}
