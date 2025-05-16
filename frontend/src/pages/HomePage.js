@@ -39,7 +39,7 @@ const HomePage = () => {
         <Text fontSize="lg" color="gray.600">
           Discover and create local sports events easily
         </Text>
-        <Button colorScheme="#004d4d" size="lg" onClick={handleClick}>
+        <Button colorScheme="teal" size="lg" onClick={handleClick}>
           {userInfo ? "Go to Dashboard" : "Get Started"}
         </Button>
       </Stack>
