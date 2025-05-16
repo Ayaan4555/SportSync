@@ -34,12 +34,12 @@ const HomePage = () => {
       {/* Hero Section */}
       <Stack spacing={6} textAlign="center" align="center" mb={12}>
         <Heading size="2xl" fontWeight="bold" color="teal.500">
-          Welcome to SportsBuddy
+          Welcome to SportSync
         </Heading>
         <Text fontSize="lg" color="gray.600">
           Discover and create local sports events easily
         </Text>
-        <Button colorScheme="teal" size="lg" onClick={handleClick}>
+        <Button colorScheme="#004d4d" size="lg" onClick={handleClick}>
           {userInfo ? "Go to Dashboard" : "Get Started"}
         </Button>
       </Stack>
